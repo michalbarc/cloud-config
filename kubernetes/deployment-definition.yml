@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mb-deployment
+  labels:
+    app: mb-app
+spec:
+  template:
+    metadata:
+      labels:
+        app: mb-app
+    spec:
+      containers:
+        - name: nginx-container
+          image: nginx
+  replicas: 3
+  selector:
+    matchLabels:
+      app: mb-app
