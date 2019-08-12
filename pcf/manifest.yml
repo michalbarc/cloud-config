@@ -1,0 +1,11 @@
+applications:
+- name: mibr-service
+  disk_quota: 1G
+  instances: 1
+  memory: 768M
+  routes:
+  - route: mibr-service.cfapps.io
+  path: mibr-0.0.1.jar
+  services:
+  - mibr-mongodb
+  stack: cflinuxfs3
